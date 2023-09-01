@@ -2,12 +2,13 @@
   "name": "masmon-text-wrapper",
   "displayName": "Masmon Text Wrapper",
   "description": "Wrap selected text with HTML tags",
+  "icon": "assets/icon.png",
   "author": {
     "name": "Budi Haryono",
     "email": "mail.budiharyono@gmail.com"
   },
   "publisher": "Budi Haryono",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.52.0"
   },
