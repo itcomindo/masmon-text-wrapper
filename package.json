@@ -11,6 +11,13 @@
   "engines": {
     "vscode": "^1.52.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itcomindo/masmon-text-wrapper.git",
+    "directory": "./masmon-text-wrapper",
+    "branch": "main",
+    "tag": "v0.0.3"
+  },
   "categories": ["Other"],
   "activationEvents": [
     "onCommand:masmon-text-wrapper.wrapText"
