@@ -1,0 +1,56 @@
+{
+  "name": "masmon-text-wrapper",
+  "displayName": "Masmon Text Wrapper",
+  "description": "Wrap selected text with HTML tags",
+  "author": {
+    "name": "Budi Haryono",
+    "email": "mail.budiharyono@gmail.com"
+  },
+  "publisher": "Budi Haryono",
+  "version": "0.0.3",
+  "engines": {
+    "vscode": "^1.52.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:masmon-text-wrapper.wrapText"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Masmon Text Wrapper",
+      "properties": {
+        "masmon-text-wrapper.customTags": {
+          "type": "array",
+          "default": ["section", "div", "span", "a", "ul", "ol", "li", "h1", "p", "blockquote", "code"],
+          "description": "Daftar HTML tags yang bisa digunakan untuk membungkus teks."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "masmon-text-wrapper.wrapText",
+        "title": "Wrap Selected Text"
+      }
+    ],
+    "keybindings": [
+      {
+        "key": "ctrl+shift+c ctrl+shift+c ctrl+shift+c",
+        "command": "masmon-text-wrapper.wrapText"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./",
+    "compile": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "typescript": "^4.0.3",
+    "vscode": "^1.52.0",
+    "tslint": "^6.1.0",
+    "@types/node": "^12.11.7",
+    "@types/mocha": "^8.0.4"
+  }
+}
